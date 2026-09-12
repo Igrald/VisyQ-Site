@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VisyQ — BI simples para quem não tem tempo a perder</title>
+<meta name="description" content="VisyQ é um programa de dashboards e BI para Windows: monte gráficos, medidas e filtros a partir das suas planilhas, sem depender de nuvem.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- =========================================================
+     CABEÇALHO
+========================================================= -->
+<header class="site-header">
+  <a href="#topo" class="brand">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 48 32" width="30" height="20">
+        <path d="M2 16C9 4 17 1 24 1s15 3 22 15c-7 12-15 15-22 15S9 28 2 16Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <circle cx="24" cy="16" r="7" fill="currentColor"/>
+      </svg>
+    </span>
+    VisyQ
+  </a>
+  <nav class="site-nav">
+    <button type="button" class="link-button" id="btn-abrir-docs-nav">Como utilizar</button>
+    <a href="#baixar" class="btn btn-small btn-primary">Baixar</a>
+  </nav>
+</header>
+
+<main id="topo">
+
+  <!-- =========================================================
+       HERO
+  ========================================================= -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Para Windows, sem depender de nuvem</p>
+      <h1>Veja seus dados com clareza, não com esforço.</h1>
+      <p class="hero-lede">
+        O VisyQ transforma suas planilhas em dashboards de verdade —
+        gráficos, medidas e filtros que conversam entre si, direto no
+        seu computador. Sem mensalidade escondida, sem enviar seus
+        dados para servidor nenhum.
+      </p>
+      <div class="hero-actions">
+        <a href="#baixar" class="btn btn-primary">Baixar para Windows</a>
+        <button type="button" class="link-button" id="btn-abrir-docs-hero">Ver como funciona →</button>
+      </div>
+      <p class="hero-footnote">
+        Compilado e testado para Windows 10/11. Pode funcionar em
+        algumas distribuições Linux via Wine, mas isso ainda não é
+        testado nem garantido oficialmente.
+      </p>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 340" class="chart-motif">
+        <line x1="30" y1="290" x2="390" y2="290" stroke="var(--line)" stroke-width="1.5"/>
+        <line x1="30" y1="30" x2="30" y2="290" stroke="var(--line)" stroke-width="1.5"/>
+        <rect x="60"  y="190" width="34" height="100" rx="4" fill="var(--brand)" opacity="0.55"/>
+        <rect x="115" y="140" width="34" height="150" rx="4" fill="var(--brand)" opacity="0.7"/>
+        <rect x="170" y="205" width="34" height="85"  rx="4" fill="var(--brand)" opacity="0.5"/>
+        <rect x="225" y="95"  width="34" height="195" rx="4" fill="var(--brand)" opacity="0.85"/>
+        <rect x="280" y="160" width="34" height="130" rx="4" fill="var(--brand)" opacity="0.6"/>
+        <rect x="335" y="120" width="34" height="170" rx="4" fill="var(--brand)" opacity="0.75"/>
+        <polyline points="77,150 132,205 187,110 242,60 297,95 352,50"
+                  fill="none" stroke="var(--accent-warm)" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="77"  cy="150" r="5" fill="var(--accent-warm)"/>
+        <circle cx="132" cy="205" r="5" fill="var(--accent-warm)"/>
+        <circle cx="187" cy="110" r="5" fill="var(--accent-warm)"/>
+        <circle cx="242" cy="60"  r="5" fill="var(--accent-warm)"/>
+        <circle cx="297" cy="95"  r="5" fill="var(--accent-warm)"/>
+        <circle cx="352" cy="50"  r="5" fill="var(--accent-warm)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CARROSSEL DE PRINTS (placeholder — ver README)
+  ========================================================= -->
+  <section class="showcase">
+    <div class="showcase-track" id="showcase-track">
+      <!-- 8 blocos placeholder, cor sólida + leve desfoque; troque
+           por <img> reais depois (ver README.md) -->
+      <div class="showcase-card ph-1"></div>
+      <div class="showcase-card ph-2"></div>
+      <div class="showcase-card ph-3"></div>
+      <div class="showcase-card ph-4"></div>
+      <div class="showcase-card ph-5"></div>
+      <div class="showcase-card ph-6"></div>
+      <div class="showcase-card ph-7"></div>
+      <div class="showcase-card ph-8"></div>
+      <!-- duplicado pra rolagem contínua sem costura -->
+      <div class="showcase-card ph-1" aria-hidden="true"></div>
+      <div class="showcase-card ph-2" aria-hidden="true"></div>
+      <div class="showcase-card ph-3" aria-hidden="true"></div>
+      <div class="showcase-card ph-4" aria-hidden="true"></div>
+      <div class="showcase-card ph-5" aria-hidden="true"></div>
+      <div class="showcase-card ph-6" aria-hidden="true"></div>
+      <div class="showcase-card ph-7" aria-hidden="true"></div>
+      <div class="showcase-card ph-8" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       O QUE DÁ PRA FAZER
+  ========================================================= -->
+  <section class="features">
+    <h2>O que você monta com ele</h2>
+    <dl class="feature-list">
+      <div class="feature-row">
+        <dt>Gráficos</dt>
+        <dd>Barras, linhas, área, rosca, combinado e mapa — clicar
+        numa categoria já filtra o resto do dashboard.</dd>
+      </div>
+      <div class="feature-row">
+        <dt>Medidas</dt>
+        <dd>De uma soma simples a fórmulas com condição e agregações
+        em duas etapas, para as contas mais específicas.</dd>
+      </div>
+      <div class="feature-row">
+        <dt>Colunas calculadas</dt>
+        <dd>Transforme uma coluna bruta — como uma data — em algo
+        pronto para usar nos seus gráficos.</dd>
+      </div>
+      <div class="feature-row">
+        <dt>Filtros</dt>
+        <dd>Cinco formas diferentes de recortar os dados, combinadas
+        do jeito que fizer sentido pro seu painel.</dd>
+      </div>
+      <div class="feature-row">
+        <dt>Compartilhamento</dt>
+        <dd>Envie um dashboard pela rede local ou exporte pra levar
+        os dados para outro lugar.</dd>
+      </div>
+      <div class="feature-row">
+        <dt>Equipe</dt>
+        <dd>Convide beneficiários para usar a licença da sua conta,
+        até o limite do seu plano.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- =========================================================
+       CTA DE DOWNLOAD
+  ========================================================= -->
+  <section class="download-cta" id="baixar">
+    <h2>Pronto pra ver seus dados de outro jeito?</h2>
+    <p>Windows 10 ou 11. Sem cadastro para instalar.</p>
+    <button type="button" class="btn btn-primary btn-large" id="btn-baixar-principal">
+      Baixar para Windows
+    </button>
+    <p class="download-meta" id="download-filename">VisyQ-Setup.exe</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="ano-atual"></span> VisyQ.</span>
+  <button type="button" class="link-button" id="btn-abrir-docs-footer">Como utilizar</button>
+</footer>
+
+<!-- =========================================================
+     MODAL: PERGUNTA ANTES DO DOWNLOAD
+========================================================= -->
+<div class="overlay" id="modal-pergunta" hidden>
+  <div class="modal modal-small" role="dialog" aria-modal="true" aria-labelledby="pergunta-titulo">
+    <button type="button" class="modal-close" data-fechar-pergunta aria-label="Fechar">✕</button>
+    <h3 id="pergunta-titulo">Antes de baixar, poderia responder uma perguntinha?</h3>
+    <p class="modal-sub">Não é obrigatório — é só pra eu entender melhor quem usa o VisyQ.</p>
+    <div class="opcoes-pergunta" role="radiogroup" aria-label="Motivo do uso">
+      <button type="button" class="opcao-pergunta" data-resposta="comercial">Uso comercial</button>
+      <button type="button" class="opcao-pergunta" data-resposta="estudante">Sou estudante</button>
+      <button type="button" class="opcao-pergunta" data-resposta="teste">Só quero testar</button>
+    </div>
+    <div class="modal-actions">
+      <button type="button" class="link-button" data-pular-pergunta>Pular e baixar</button>
+      <button type="button" class="btn btn-primary" id="btn-confirmar-pergunta" disabled>Baixar</button>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     OVERLAY: DOCUMENTAÇÃO ("Como Utilizar")
+========================================================= -->
+<div class="overlay" id="docs-overlay" hidden>
+  <div class="docs-shell" role="dialog" aria-modal="true" aria-label="Como utilizar o VisyQ">
+
+    <aside class="docs-sidebar">
+      <div class="docs-sidebar-head">
+        <h2>Como utilizar</h2>
+        <button type="button" class="modal-close" data-fechar-docs aria-label="Fechar">✕</button>
+      </div>
+      <input
+        type="search"
+        id="docs-busca"
+        class="docs-search"
+        placeholder="Buscar um tópico… (ex: coluna calculada)"
+        autocomplete="off"
+      >
+      <nav id="docs-tree" class="docs-tree" aria-label="Tópicos da documentação"></nav>
+    </aside>
+
+    <section class="docs-content" id="docs-content">
+      <div class="docs-empty">
+        <p>Escolha um tópico ao lado para ver a explicação e o vídeo.</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="docs-content.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
