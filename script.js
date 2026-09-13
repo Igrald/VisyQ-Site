@@ -14,7 +14,7 @@ const CONFIG = {
   // pra registrar que um download aconteceu (ver conversa). Se
   // preferir não registrar nada, deixe essa string vazia ("") que o
   // site pula essa parte silenciosamente.
-  URL_API_DOWNLOADS: "https://SUA-API-DE-DOWNLOADS.onrender.com/api/downloads/registrar",
+  URL_API_DOWNLOADS: "https://visyq-site-api.onrender.com/api/downloads/registrar",
 };
 
 document.getElementById("ano-atual").textContent = new Date().getFullYear();
