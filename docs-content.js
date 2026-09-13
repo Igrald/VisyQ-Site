@@ -32,7 +32,7 @@ const DOCS_TREE = [
         conteudo: `
           <p>Esses cinco tipos compartilham o mesmo comportamento por
           baixo: você escolhe uma coluna para o eixo X (a categoria) e
-          uma medida ou coluna com agregação para o eixo Y (o valor).
+          uma outra coluna, medida ou coluna calculada para o eixo Y (o valor).
           A diferença entre eles é só a forma de desenhar o mesmo
           dado.</p>
           <p>Clicar numa barra, fatia ou ponto filtra automaticamente
