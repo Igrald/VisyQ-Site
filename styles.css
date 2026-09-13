@@ -141,6 +141,7 @@ button {
   color: var(--ink);
 }
 .brand-mark { color: var(--brand-bright); display: inline-flex; }
+.brand-mark img { height: 22px; width: auto; display: block; }
 
 .site-nav {
   display: flex;
