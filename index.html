@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,95 +18,83 @@
      CABEÇALHO
 ========================================================= -->
 <header class="site-header">
-  <a href="#topo" class="brand">
-    <span class="brand-mark" aria-hidden="true">
-      <!-- <svg viewBox="0 0 48 32" width="30" height="20">
-        <path d="M2 16C9 4 17 1 24 1s15 3 22 15c-7 12-15 15-22 15S9 28 2 16Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
-        <circle cx="24" cy="16" r="7" fill="currentColor"/>
-      </svg> -->
-      <img src="./logo.png" alt="Logo VisyQ">
-    </span>
-    VisyQ
-  </a>
-  <nav class="site-nav">
-    <button type="button" class="link-button" id="btn-abrir-docs-nav">Como utilizar</button>
-    <a href="#baixar" class="btn btn-small btn-primary">Baixar</a>
-  </nav>
+  <div class="site-header-inner">
+    <a href="#topo" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="./logo.png" alt="Logo VisyQ">
+      </span>
+      VisyQ
+      <span class="brand-version">v1.0</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#topo" class="nav-link">Download</a>
+      <button type="button" class="nav-link nav-link-btn" id="btn-abrir-docs-nav">Documentação</button>
+    </nav>
+  </div>
 </header>
 
 <main id="topo">
 
   <!-- =========================================================
-       HERO
+       HERO + CARROSSEL DE FUNDO
   ========================================================= -->
   <section class="hero">
+
+    <div class="hero-carousel" aria-hidden="true">
+      <div class="hero-carousel-track" id="showcase-track">
+        <div class="showcase-card ph-1"></div>
+        <div class="showcase-card ph-2"></div>
+        <div class="showcase-card ph-3"></div>
+        <div class="showcase-card ph-4"></div>
+        <div class="showcase-card ph-5"></div>
+        <div class="showcase-card ph-6"></div>
+        <div class="showcase-card ph-7"></div>
+        <div class="showcase-card ph-8"></div>
+        <!-- duplicado pra rolagem contínua sem costura -->
+        <div class="showcase-card ph-1" aria-hidden="true"></div>
+        <div class="showcase-card ph-2" aria-hidden="true"></div>
+        <div class="showcase-card ph-3" aria-hidden="true"></div>
+        <div class="showcase-card ph-4" aria-hidden="true"></div>
+        <div class="showcase-card ph-5" aria-hidden="true"></div>
+        <div class="showcase-card ph-6" aria-hidden="true"></div>
+        <div class="showcase-card ph-7" aria-hidden="true"></div>
+        <div class="showcase-card ph-8" aria-hidden="true"></div>
+      </div>
+      <div class="hero-carousel-overlay"></div>
+    </div>
+
     <div class="hero-copy">
-      <p class="hero-eyebrow">Para Windows, sem depender de nuvem</p>
-      <h1>Veja seus dados com clareza, não com esforço.</h1>
+      <p class="hero-eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        PARA WINDOWS, SEM DEPENDER DE NUVEM
+      </p>
+      <h1>Veja seus dados com <span class="text-gradient">clareza</span>,<br>não com esforço.</h1>
       <p class="hero-lede">
         O VisyQ transforma suas planilhas em dashboards de verdade —
         gráficos, medidas e filtros que conversam entre si, direto no
-        seu computador. Sem enviar seus
+        seu computador. Sem mensalidade escondida, sem enviar seus
         dados para servidor nenhum.
       </p>
-      <div class="hero-actions">
-        <a href="#baixar" class="btn btn-primary">Baixar para Windows</a>
-        <button type="button" class="link-button" id="btn-abrir-docs-hero">Ver como funciona →</button>
+
+      <button type="button" class="btn-download" id="btn-baixar-principal">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M10 2v10m0 0l-4-4m4 4l4-4M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Baixar para Windows
+      </button>
+      <p class="download-meta" id="download-filename">VisyQ-Setup.exe</p>
+
+      <div class="os-badges">
+        <span class="os-badge os-ok">✓ Windows 10/11</span>
+        <span class="os-badge os-maybe">◐ Linux (via Wine, não garantido)</span>
       </div>
-      <p class="hero-footnote">
-        Compilado e testado para Windows 10/11. Pode funcionar em
-        algumas distribuições Linux via Wine, mas isso ainda não é
-        testado nem garantido oficialmente.
-      </p>
+
+      <button type="button" class="link-button link-hero" id="btn-abrir-docs-hero">Ver como funciona →</button>
     </div>
 
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 420 340" class="chart-motif">
-        <line x1="30" y1="290" x2="390" y2="290" stroke="var(--line)" stroke-width="1.5"/>
-        <line x1="30" y1="30" x2="30" y2="290" stroke="var(--line)" stroke-width="1.5"/>
-        <rect x="60"  y="190" width="34" height="100" rx="4" fill="var(--brand)" opacity="0.55"/>
-        <rect x="115" y="140" width="34" height="150" rx="4" fill="var(--brand)" opacity="0.7"/>
-        <rect x="170" y="205" width="34" height="85"  rx="4" fill="var(--brand)" opacity="0.5"/>
-        <rect x="225" y="95"  width="34" height="195" rx="4" fill="var(--brand)" opacity="0.85"/>
-        <rect x="280" y="160" width="34" height="130" rx="4" fill="var(--brand)" opacity="0.6"/>
-        <rect x="335" y="120" width="34" height="170" rx="4" fill="var(--brand)" opacity="0.75"/>
-        <polyline points="77,150 132,205 187,110 242,60 297,95 352,50"
-                  fill="none" stroke="var(--accent-warm)" stroke-width="3"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="77"  cy="150" r="5" fill="var(--accent-warm)"/>
-        <circle cx="132" cy="205" r="5" fill="var(--accent-warm)"/>
-        <circle cx="187" cy="110" r="5" fill="var(--accent-warm)"/>
-        <circle cx="242" cy="60"  r="5" fill="var(--accent-warm)"/>
-        <circle cx="297" cy="95"  r="5" fill="var(--accent-warm)"/>
-        <circle cx="352" cy="50"  r="5" fill="var(--accent-warm)"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       CARROSSEL DE PRINTS (placeholder — ver README)
-  ========================================================= -->
-  <section class="showcase">
-    <div class="showcase-track" id="showcase-track">
-      <!-- 8 blocos placeholder, cor sólida + leve desfoque; troque
-           por <img> reais depois (ver README.md) -->
-      <div class="showcase-card ph-1"></div>
-      <div class="showcase-card ph-2"></div>
-      <div class="showcase-card ph-3"></div>
-      <div class="showcase-card ph-4"></div>
-      <div class="showcase-card ph-5"></div>
-      <div class="showcase-card ph-6"></div>
-      <div class="showcase-card ph-7"></div>
-      <div class="showcase-card ph-8"></div>
-      <!-- duplicado pra rolagem contínua sem costura -->
-      <div class="showcase-card ph-1" aria-hidden="true"></div>
-      <div class="showcase-card ph-2" aria-hidden="true"></div>
-      <div class="showcase-card ph-3" aria-hidden="true"></div>
-      <div class="showcase-card ph-4" aria-hidden="true"></div>
-      <div class="showcase-card ph-5" aria-hidden="true"></div>
-      <div class="showcase-card ph-6" aria-hidden="true"></div>
-      <div class="showcase-card ph-7" aria-hidden="true"></div>
-      <div class="showcase-card ph-8" aria-hidden="true"></div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>ROLE PARA VER MAIS</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
@@ -114,7 +102,10 @@
        O QUE DÁ PRA FAZER
   ========================================================= -->
   <section class="features">
-    <h2>O que você monta com ele</h2>
+    <p class="section-eyebrow">O QUE VOCÊ MONTA</p>
+    <h2>Tudo que um dashboard de verdade precisa</h2>
+    <div class="section-underline"></div>
+
     <dl class="feature-list">
       <div class="feature-row">
         <dt>Gráficos</dt>
@@ -149,22 +140,16 @@
     </dl>
   </section>
 
-  <!-- =========================================================
-       CTA DE DOWNLOAD
-  ========================================================= -->
-  <section class="download-cta" id="baixar">
-    <h2>Pronto pra ver seus dados de outro jeito?</h2>
-    <p>Windows 10 ou 11. Sem cadastro para instalar.</p>
-    <button type="button" class="btn btn-primary btn-large" id="btn-baixar-principal">
-      Baixar para Windows
-    </button>
-    <p class="download-meta" id="download-filename">VisyQ-Setup.exe</p>
-  </section>
-
 </main>
 
 <footer class="site-footer">
-  <span>© <span id="ano-atual"></span> VisyQ.</span>
+  <div class="footer-brand">
+    <span class="footer-mark" aria-hidden="true">
+      <img src="./logo.png" alt="">
+    </span>
+    <span>VisyQ</span>
+  </div>
+  <span class="footer-copy">© <span id="ano-atual"></span> VisyQ. Todos os direitos reservados.</span>
   <button type="button" class="link-button" id="btn-abrir-docs-footer">Como utilizar</button>
 </footer>
 
