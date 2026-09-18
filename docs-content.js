@@ -79,7 +79,7 @@ const DOCS_TREE = [
           estados) com uma cor que varia conforme o valor da medida
           escolhida -- quanto mais escura, maior o valor (ou o
           contrário, dependendo da escala escolhida).</p>
-          <p>Existem 7 mapas prontos para usar, cobrindo diferentes
+          <p>Existem duas opções de marcação possíveis para mapas, cobrindo diferentes
           recortes geográficos.</p>
         `,
       },
